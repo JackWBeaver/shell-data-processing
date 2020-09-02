@@ -65,3 +65,12 @@ The -r flag produces a list in reverse order. For this assignment it brought bac
 
 Dashes:
 There is only one dash used for one letter, however, if the word is two or more letters long then there are two dashes.
+
+## Curl Commands
+Curl Command Used to Obtain Data:
+
+curl "https://www.espn.com/nfl/story/_/id/29766900/nfl-rank-predicting-best-100-players-2020-nfl-season" > data.txt
+
+Curl Command Used to Obtain Most Common Words, Sorted:
+
+tr ' ' '\12' < data.txt | sort | unique -c | sort -nr > result.txt
