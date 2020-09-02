@@ -9,8 +9,8 @@
 - Unordered List: same as above but use "-" instead of numbers
 - Code: 'code'
 - Horizontal Rule: ---
-- Link: [title](https://www.blahblahblah.com)
-- Image: ![text](image.jpg)
+- Link: '[title](https://www.blahblahblah.com)'
+- Image: '![text](image.jpg)'
 
 ## Code Fencing
 '''
@@ -56,9 +56,12 @@
 ## Bash Tips
 Up Arrow:
 The up arrow in Bash brings the last line of code that you ran. If you contine to use the up arrow it continues to scroll through the last couple of lines of code that you ran.
+
 -n Flag:
 The -n flag produces a numeric amount of times something is used. For this assignment it brings back the amount of times a word is used.
+
 -r Flag:
 The -r flag produces a list in reverse order. For this assignment it brought back the reverse list of the words used in the URL we chose.
+
 Dashes:
-There is only one dash used for one letter, however, depending on the size of the word there are that many dashes with said word.
+There is only one dash used for one letter, however, if the word is two or more letters long then there are two dashes.
