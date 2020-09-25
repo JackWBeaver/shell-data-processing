@@ -74,3 +74,22 @@ curl "https://www.espn.com/nfl/story/_/id/29766900/nfl-rank-predicting-best-100-
 Curl Command Used to Obtain Most Common Words, Sorted:
 
 tr ' ' '\12' < data.txt | sort | unique -c | sort -nr > result.txt
+
+## Commands for Maven, Zookeeper, and Kafka
+Open up PowerShell as Administrator from inside the Kafka -version file:
+
+1. Run Zookeeper Service (keep the window open)
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+2. Run Kafka Service (keep the window open)
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+3. Creates list, topic, or delete topics (temporary window)
+.\bin\windows\kafka-topics.bat --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --create --topic jacks information
+.\bin\windows\kafka-topics.bat --zookeeper localhost:2181 --list
+
+4. Run Kafka Producer to add topics into your list (keep window open)
+.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic jacks information
+
+5. Run Kafka Consumer (reorders the list)
+.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic jacks information --from-beginning
